@@ -8,7 +8,7 @@ This repository contains code in four languages: **C**, **C++**, **Java**, and *
 
 ### Compile
 ```powershell
-gcc -o output.exe source.c
+gcc -o outputC.exe source.c
 ```
 
 ### Run
@@ -22,7 +22,7 @@ gcc -o output.exe source.c
 
 ### Compile
 ```powershell
-g++ -o output.exe source.cpp
+g++ -o outputCPP.exe source.cpp
 ```
 
 ### Run
