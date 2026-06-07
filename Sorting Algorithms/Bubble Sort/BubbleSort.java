@@ -13,7 +13,7 @@ class BubbleSort{
         }
         System.out.println(arr[n-1]+ " ]");
 
-        bubbleSort(arr, n);
+        bubbleSort(arr);
 
         System.out.print("\n\nArray after sorting: [ ");
         for(int i=0; i<n-1; i++){
@@ -23,8 +23,9 @@ class BubbleSort{
     }
 
 
-    public static void bubbleSort(int[] arr, int n){
+    public static void bubbleSort(int[] arr){
         int temp;
+        int n = arr.length;
         for(int i=0; i<n-1; i++){
             for(int j=0; j<n-i-1; j++){
                 if(arr[j] > arr[j+1]){

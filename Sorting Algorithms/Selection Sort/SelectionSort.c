@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int* selectionSort(int*,int);
+void selectionSort(int*,int);
 
 
 int main(void){
@@ -27,7 +27,7 @@ int main(void){
 }
 
 
-int* selectionSort(int* arr, int n){
+void selectionSort(int* arr, int n){
     int temp, k;
     for(int i=0; i<n-1; i++){
         k = i;
@@ -40,5 +40,5 @@ int* selectionSort(int* arr, int n){
         arr[i] = arr[k];
         arr[k] = temp;      
     }
-    return arr;
+    return;
 }

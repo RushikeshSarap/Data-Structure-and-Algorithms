@@ -9,7 +9,7 @@ def main():
 
 
 def bubble_sort(arr: list[int]) -> None:
-    """Sorts a list of integers in place."""
+    """Sorts a list of integers by placing each at their correct position, starting from any side."""
     n: int = len(arr)
     for i in range(0,n-1):
         for j in range(0,n-i-1):

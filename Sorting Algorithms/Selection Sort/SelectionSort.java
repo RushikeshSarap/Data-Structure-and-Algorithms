@@ -13,7 +13,7 @@ class SelectionSort{
         }
         System.out.println(arr[n-1]+ " ]");
 
-        selectionSort(arr, n);
+        selectionSort(arr);
 
         System.out.print("\n\nArray after sorting: [ ");
         for(int i=0; i<n-1; i++){
@@ -23,8 +23,9 @@ class SelectionSort{
     }
 
 
-    public static void selectionSort(int[] arr, int n){
+    public static void selectionSort(int[] arr){
         int k, temp;
+        int n = arr.length;
         for(int i=0; i<n-1; i++){
             k = i;
             for(int j=i+1; j<n; j++){

@@ -9,7 +9,7 @@ def main():
 
 
 def quick_sort(arr: list[int], start: int, end: int) -> None:
-    """Sorts a list of integers by finding correct position of next int and swapping."""
+    """Sorts a list of integers by finding the correct position of the pivot and swapping elements."""
     if start < end:
         pivot = partition(arr, start, end)
         quick_sort(arr, start, pivot-1)

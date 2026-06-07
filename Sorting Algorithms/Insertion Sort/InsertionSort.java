@@ -13,7 +13,7 @@ class InsertionSort{
         }
         System.out.println(arr[n-1]+ " ]");
 
-        insertionSort(arr, n);
+        insertionSort(arr);
 
         System.out.print("\n\nArray after sorting: [ ");
         for(int i=0; i<n-1; i++){
@@ -23,8 +23,9 @@ class InsertionSort{
     }
 
 
-    public static void insertionSort(int[] arr, int n){
+    public static void insertionSort(int[] arr){
         int key, j;
+        int n = arr.length;
         for(int i=1; i<n; i++){
             key = arr[i];
             j = i-1;

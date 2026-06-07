@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int* bubbleSort(int*,int);
+void bubbleSort(int*,int);
 
 
 int main(void){
@@ -27,7 +27,7 @@ int main(void){
 }
 
 
-int* bubbleSort(int* arr, int n){
+void bubbleSort(int* arr, int n){
     int temp;
     for(int i=0; i<n-1; i++){
         for(int j=0; j<n-i-1; j++){
@@ -38,5 +38,5 @@ int* bubbleSort(int* arr, int n){
             }
         }      
     }
-    return arr;
+    return;
 }

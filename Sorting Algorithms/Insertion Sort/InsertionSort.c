@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 
-int* insertionSort(int*,int);
+void insertionSort(int*,int);
 
 
 int main(void){
@@ -27,7 +27,7 @@ int main(void){
 }
 
 
-int* insertionSort(int* arr, int n){
+void insertionSort(int* arr, int n){
     int j, key;
     for(int i=1; i<n; i++){
         key = arr[i];
@@ -37,5 +37,5 @@ int* insertionSort(int* arr, int n){
         }
         arr[j+1] = key;     
     }
-    return arr;
+    return;
 }
