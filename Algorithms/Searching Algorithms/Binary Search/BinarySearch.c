@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+int binarySearch(int*,int,int,int);
+
+int main(void){
+    printf("Binary Search Algorithm using C\n");
+    int arr[] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+    int n = 10;
+    int x = 4;           //number to be searched
+    int pos;
+
+    printf("Searching for %d in the array...\n",x);
+
+    pos = binarySearch(arr, 0, n-1, x);
+
+    if(pos == -1){
+        printf("%d not found in the array", x);
+    }else{
+        printf("%d found in the array at index %d", x, pos);
+    }
+
+    return 0;
+}
+
+int binarySearch(int* arr, int start, int end, int x){
+    int mid;
+
+    if(start > end)
+        return -1;
+
+    mid = (start+end) >> 1;
+
+    if(x == arr[mid]){
+        return mid;
+    }else if(x < arr[mid]){
+        return binarySearch(arr,start,mid-1,x);
+    }
+    else{
+        return binarySearch(arr,mid+1,end,x);
+    }
+}
