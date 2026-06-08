@@ -1,7 +1,9 @@
 #include <stdio.h>
 
+
 void lcs_length(int m,int n,char[m+1][n+1],int[m+1][n+1],char*,char*);
 void print_lcs(int m,int n,char[m+1][n+1],char*,int,int);
+
 
 int main(void){
     
@@ -23,6 +25,7 @@ int main(void){
 
     return 0;
 }
+
 
 void lcs_length(int m, int n, char b[m+1][n+1], int c[m+1][n+1], char* x, char* y){
     
@@ -52,6 +55,7 @@ void lcs_length(int m, int n, char b[m+1][n+1], int c[m+1][n+1], char* x, char* 
     return;
 }
 
+
 void print_lcs(int m, int n, char b[m+1][n+1], char* x, int i, int j){
     if( (i == 0) || (j == 0) ){
         return;
@@ -65,4 +69,6 @@ void print_lcs(int m, int n, char b[m+1][n+1], char* x, int i, int j){
     }else{
         print_lcs(m,n,b,x,i,j-1);
     }
+    
+    return;
 }

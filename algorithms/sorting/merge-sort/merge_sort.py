@@ -1,4 +1,4 @@
-def main(): 
+def main() -> None: 
     print("Merge Sort Algorithm using python")
 
     arr: list[int] = [2, 1, 5, 8, 3, 9, 4, 7, 6, 0]
@@ -7,6 +7,8 @@ def main():
     print("\nArray before sorting: ",arr)
     merge_sort(arr,temp_arr,0,len(arr)-1)
     print("\nArray after sorting: ",arr)
+
+    return
 
 
 def merge_sort(arr: list[int], b: list[int], low: int, high: int) -> None:
@@ -17,6 +19,7 @@ def merge_sort(arr: list[int], b: list[int], low: int, high: int) -> None:
         merge_sort(arr,b,mid+1,high)
 
         merge(arr,b,low,mid,high)
+        
     return 
 
 

@@ -1,4 +1,4 @@
-def main(): 
+def main() -> None: 
     print("Selection Sort Algorithm using python")
 
     arr: list[int] = [2, 1, 5, 8, 3, 9, 4, 7, 6, 0]
@@ -6,6 +6,8 @@ def main():
     print("\nArray before sorting: ",arr)
     selection_sort(arr)
     print("\nArray after sorting: ",arr)
+
+    return
 
 
 def selection_sort(arr: list[int]) -> None:
@@ -17,6 +19,7 @@ def selection_sort(arr: list[int]) -> None:
             if arr[j] < arr[k]:
                 k = j
         arr[i], arr[k] = arr[k], arr[i]
+        
     return 
 
 

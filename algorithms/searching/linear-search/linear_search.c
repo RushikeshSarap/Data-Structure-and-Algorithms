@@ -1,6 +1,8 @@
 #include <stdio.h>
 
+
 int linear_search(int*,int,int);
+
 
 int main(void){
     printf("Linear Search Algorithm using C\n");
@@ -22,11 +24,13 @@ int main(void){
     return 0;
 }
 
+
 int linear_search(int* arr, int n, int x){
     for(int i=0; i<n; i++){
         if(arr[i] == x){
             return i;
         }
     }
+    
     return -1;
 }

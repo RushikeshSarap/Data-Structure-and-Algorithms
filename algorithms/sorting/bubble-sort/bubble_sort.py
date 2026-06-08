@@ -1,4 +1,4 @@
-def main(): 
+def main() -> None:
     print("Bubble Sort Algorithm using python")
 
     arr: list[int] = [2, 1, 5, 8, 3, 9, 4, 7, 6, 0]
@@ -6,6 +6,8 @@ def main():
     print("\nArray before sorting: ",arr)
     bubble_sort(arr)
     print("\nArray after sorting: ",arr)
+
+    return
 
 
 def bubble_sort(arr: list[int]) -> None:

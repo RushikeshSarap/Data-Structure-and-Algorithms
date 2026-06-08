@@ -40,5 +40,6 @@ void selection_sort(int* arr, int n){
         arr[i] = arr[k];
         arr[k] = temp;      
     }
+    
     return;
 }

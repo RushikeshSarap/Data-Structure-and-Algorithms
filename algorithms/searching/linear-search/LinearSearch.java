@@ -1,5 +1,6 @@
 class LinearSearch{
 
+
     public static void main(String[] args){
         System.out.println("Linear Search Algorithm using Java");
         int[] arr = {2, 1, 5, 8, 3, 9, 4, 7, 6, 0};
@@ -15,6 +16,7 @@ class LinearSearch{
         return;
     }
 
+
     public static int linearSearch(int[] arr, int x){
         int n = arr.length;
         for(int i=0; i<n; i++){
@@ -22,6 +24,9 @@ class LinearSearch{
                 return i;
             }
         }
+
         return -1;
     }
+
+    
 }

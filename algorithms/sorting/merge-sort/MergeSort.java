@@ -6,7 +6,7 @@ class MergeSort{
         int n = arr.length;
         int tempArr[] = new int[n];
 
-        System.out.println("Insertion Sort Algorithm using Java");
+        System.out.println("Merge Sort Algorithm using Java");
 
         System.out.print("\n\nArray before sorting: [ ");
         for(int i=0; i<n-1; i++){
@@ -21,6 +21,8 @@ class MergeSort{
             System.out.print(arr[i] + ", ");
         }
         System.out.println(arr[n-1]+ " ]");
+
+        return;
     }
 
 
@@ -33,7 +35,10 @@ class MergeSort{
             
             merge(arr, b, low, mid, high);
         }
+
+        return;
     }
+
 
     public static void merge(int[] a, int[] b, int low, int mid, int high){
         int h = low;                            //Original Array Pointer
@@ -65,4 +70,6 @@ class MergeSort{
 
         return;
     }
+
+
 }

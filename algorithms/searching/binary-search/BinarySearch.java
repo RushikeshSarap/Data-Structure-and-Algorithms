@@ -1,5 +1,6 @@
 class BinarySearch{
 
+
     public static void main(String[] args){
         System.out.println("Binary Search Algorithm using Java");
         int[] arr = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -15,6 +16,7 @@ class BinarySearch{
         return;
     }
 
+    
     public static int binarySearch(int[] arr, int start, int end, int x){
         int mid;
 
@@ -32,4 +34,6 @@ class BinarySearch{
             return binarySearch(arr, mid+1, end, x);
         }
     }
+
+
 }

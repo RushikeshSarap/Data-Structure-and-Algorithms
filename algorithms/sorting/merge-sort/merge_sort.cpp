@@ -4,6 +4,7 @@
 void merge_sort(int*,int*,int,int);
 void merge(int*,int*,int,int,int);
 
+
 int main(void){
     int n = 10;
     int arr[] = {2, 1, 5, 8, 3, 9, 4, 7, 6, 0};
@@ -38,7 +39,9 @@ void merge_sort(int* a, int* b, int low, int high){
         merge(a,b,low,mid,high);
     }
 
+    return;
 }
+
 
 void merge(int* a, int* b, int low, int mid, int high){
     int h = low;                            //Original array pointer
@@ -68,4 +71,5 @@ void merge(int* a, int* b, int low, int mid, int high){
         a[k] = b[k];
     }
 
+    return;
 }

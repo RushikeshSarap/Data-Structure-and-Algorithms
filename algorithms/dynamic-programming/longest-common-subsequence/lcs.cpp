@@ -2,8 +2,10 @@
 #include <vector>
 #include <string>
 
+
 void lcs_length(std::vector<std::vector<char>>& b, std::vector<std::vector<int>>& c, const std::string& x, const std::string& y);
 void print_lcs(const std::vector<std::vector<char>>& b, const std::string& x, int i, int j);
+
 
 int main(void){
     std::cout << "Longest Common Subsequence Algorithm using C++\n";
@@ -15,8 +17,8 @@ int main(void){
 //                  "L...S.D..KJ.ALDL.KASJ.G.."
     int n = y.length();
 
-    std::vector<std::vector<char>> b(m+1, std::vector<char>(n+1));
-    std::vector<std::vector<int>> c(m+1, std::vector<int>(n+1));
+    std::vector<std::vector<char>> b(m+1, std::vector<char>(n+1, ' '));
+    std::vector<std::vector<int>> c(m+1, std::vector<int>(n+1, 0));
     
     lcs_length(b,c,x,y);
 
@@ -24,6 +26,7 @@ int main(void){
     
     return 0;
 }
+
 
 void lcs_length(std::vector<std::vector<char>>& b, std::vector<std::vector<int>>& c, const std::string& x, const std::string& y){
     int m = x.length();
@@ -52,9 +55,9 @@ void lcs_length(std::vector<std::vector<char>>& b, std::vector<std::vector<int>>
         }
     }
 
-
     return;
 }
+
 
 void print_lcs(const std::vector<std::vector<char>>& b, const std::string& x, int i, int j){
     if( (i==0) || (j==0) ){

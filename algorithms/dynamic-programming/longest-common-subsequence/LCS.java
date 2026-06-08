@@ -1,5 +1,6 @@
 class LCS{
 
+
     public static void main(String[] args){
         System.out.println("Longest Common Subsequence Algorithm using Java");
 
@@ -20,6 +21,7 @@ class LCS{
 
         return;
     }
+
 
     public static void lcsLength(char[][] b, int[][] c, String x, String y){
         int m = x.length();
@@ -51,6 +53,7 @@ class LCS{
         return;
     }
 
+
     public static void printLCS(char[][] b, String x, int i, int j){
         if( (i==0) || (j==0)){
             return;
@@ -67,4 +70,6 @@ class LCS{
 
         return;
     }
+
+    
 }

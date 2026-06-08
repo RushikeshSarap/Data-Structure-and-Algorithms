@@ -29,6 +29,7 @@ int main(void)
     return 0;
 }
 
+
 void merge(int* a, int* b, int low, int mid, int high){
     int h = low;                            //Original array pointer
     int j = mid+1;                          //Original array pointer
@@ -42,6 +43,7 @@ void merge(int* a, int* b, int low, int mid, int high){
             b[i++] = a[j++];  
         }
     }
+
     if(h > mid){
         for(int k=j; k<=high; k++){
             b[i++] = a[k];
@@ -55,8 +57,10 @@ void merge(int* a, int* b, int low, int mid, int high){
     for(int k=low; k<=high; k++){
         a[k] = b[k];
     }
+    
     return;
 }
+
 
 void merge_sort(int* a, int* b, int low, int high){
     int mid;
@@ -67,4 +71,6 @@ void merge_sort(int* a, int* b, int low, int high){
 
         merge(a,b,low,mid,high);
     }
+
+    return;
 }

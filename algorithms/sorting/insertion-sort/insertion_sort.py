@@ -1,4 +1,4 @@
-def main(): 
+def main() -> None:
     print("Insertion Sort Algorithm using python")
 
     arr: list[int] = [2, 1, 5, 8, 3, 9, 4, 7, 6, 0]
@@ -6,6 +6,8 @@ def main():
     print("\nArray before sorting: ",arr)
     insertion_sort(arr)
     print("\nArray after sorting: ",arr)
+
+    return
 
 
 def insertion_sort(arr: list[int]) -> None:
@@ -18,6 +20,7 @@ def insertion_sort(arr: list[int]) -> None:
             arr[j+1] = arr[j]
             j -= 1
         arr[j+1] = key
+        
     return 
 
 

@@ -20,6 +20,8 @@ class SelectionSort{
             System.out.print(arr[i] + ", ");
         }
         System.out.println(arr[n-1]+ " ]");
+
+        return;
     }
 
 
@@ -37,6 +39,8 @@ class SelectionSort{
             arr[i] = arr[k];
             arr[k] = temp;
         }
+
+        return;
     }
     
 

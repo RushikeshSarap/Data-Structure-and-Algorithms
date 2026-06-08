@@ -1,6 +1,8 @@
 #include <iostream>
 
+
 int binary_search(int*,int,int,int);
+
 
 int main(void){
     std::cout << "Binary Search Algorithm using C++\n";
@@ -19,6 +21,7 @@ int main(void){
     
     return 0;
 }
+
 
 int binary_search(int* arr, int start, int end, int x){
     int mid;

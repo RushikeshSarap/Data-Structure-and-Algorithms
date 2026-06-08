@@ -1,4 +1,4 @@
-def main():
+def main() -> None:
     print("Linear Search Algorithm using python\n") 
     arr: list[int] = [2, 1, 5, 8, 3, 9, 4, 7, 6, 0]
     x: int = 4
@@ -8,6 +8,8 @@ def main():
         print(f"{x} not found in array\n")
     else:
         print(f"{x} found in array at index {pos}\n")
+
+    return
 
 
 def linear_search(arr: list[int], x: int) -> int:
