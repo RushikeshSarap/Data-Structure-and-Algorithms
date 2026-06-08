@@ -1,13 +1,13 @@
 #include <stdio.h>
 
 
-void selectionSort(int*,int);
+void bubble_sort(int*,int);
 
 
 int main(void){
     int n = 10;
     int arr[] = {2, 1, 5, 8, 3, 9, 4, 7, 6, 0};
-    printf("Selection Sort Algorithm using C");
+    printf("Bubble Sort Algorithm using C");
 
     printf("\n\nArray before sorting: [ ");
     for(int i=0; i<n-1; i++){
@@ -15,7 +15,7 @@ int main(void){
     }
     printf("%d ]", arr[n-1]);
 
-    selectionSort(arr, n);
+    bubble_sort(arr, n);
 
     printf("\n\nArray after sorting: [ ");
     for(int i=0; i<n-1; i++){
@@ -27,18 +27,16 @@ int main(void){
 }
 
 
-void selectionSort(int* arr, int n){
-    int temp, k;
+void bubble_sort(int* arr, int n){
+    int temp;
     for(int i=0; i<n-1; i++){
-        k = i;
-        for(int j=i+1; j<n; j++){
-            if(arr[j] < arr[k]){
-                k = j;
+        for(int j=0; j<n-i-1; j++){
+            if(arr[j] > arr[j+1]){
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
             }
-        }
-        temp = arr[i];
-        arr[i] = arr[k];
-        arr[k] = temp;      
+        }      
     }
     return;
 }

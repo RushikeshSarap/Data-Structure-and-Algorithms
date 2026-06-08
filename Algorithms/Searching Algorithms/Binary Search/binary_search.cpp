@@ -1,6 +1,6 @@
 #include <iostream>
 
-int binarySearch(int*,int,int,int);
+int binary_search(int*,int,int,int);
 
 int main(void){
     std::cout << "Binary Search Algorithm using C++\n";
@@ -9,7 +9,7 @@ int main(void){
     int x = 4;
     int pos;
 
-    pos = binarySearch(arr,0,n-1,x);
+    pos = binary_search(arr,0,n-1,x);
 
     if(pos == -1){
         std::cout << x << " not found in array\n";
@@ -20,7 +20,7 @@ int main(void){
     return 0;
 }
 
-int binarySearch(int* arr, int start, int end, int x){
+int binary_search(int* arr, int start, int end, int x){
     int mid;
 
     if(start > end)
@@ -31,8 +31,8 @@ int binarySearch(int* arr, int start, int end, int x){
     if(x == arr[mid]){
         return mid;
     }else if(x < arr[mid]){
-        return binarySearch(arr,start,mid-1,x);
+        return binary_search(arr,start,mid-1,x);
     }else{
-        return binarySearch(arr,mid+1,end,x);
+        return binary_search(arr,mid+1,end,x);
     }
 }

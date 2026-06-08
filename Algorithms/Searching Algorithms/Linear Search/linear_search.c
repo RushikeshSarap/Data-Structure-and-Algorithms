@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int linearSearch(int*,int,int);
+int linear_search(int*,int,int);
 
 int main(void){
     printf("Linear Search Algorithm using C\n");
@@ -11,7 +11,7 @@ int main(void){
 
     printf("Searching for %d in the array...\n",x);
 
-    pos = linearSearch(arr, n, x);
+    pos = linear_search(arr, n, x);
 
     if(pos == -1){
         printf("%d not found in the array", x);
@@ -22,7 +22,7 @@ int main(void){
     return 0;
 }
 
-int linearSearch(int* arr, int n, int x){
+int linear_search(int* arr, int n, int x){
     for(int i=0; i<n; i++){
         if(arr[i] == x){
             return i;

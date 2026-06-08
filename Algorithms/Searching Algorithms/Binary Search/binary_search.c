@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int binarySearch(int*,int,int,int);
+int binary_search(int*,int,int,int);
 
 int main(void){
     printf("Binary Search Algorithm using C\n");
@@ -11,7 +11,7 @@ int main(void){
 
     printf("Searching for %d in the array...\n",x);
 
-    pos = binarySearch(arr, 0, n-1, x);
+    pos = binary_search(arr, 0, n-1, x);
 
     if(pos == -1){
         printf("%d not found in the array", x);
@@ -22,7 +22,7 @@ int main(void){
     return 0;
 }
 
-int binarySearch(int* arr, int start, int end, int x){
+int binary_search(int* arr, int start, int end, int x){
     int mid;
 
     if(start > end)
@@ -33,9 +33,9 @@ int binarySearch(int* arr, int start, int end, int x){
     if(x == arr[mid]){
         return mid;
     }else if(x < arr[mid]){
-        return binarySearch(arr,start,mid-1,x);
+        return binary_search(arr,start,mid-1,x);
     }
     else{
-        return binarySearch(arr,mid+1,end,x);
+        return binary_search(arr,mid+1,end,x);
     }
 }

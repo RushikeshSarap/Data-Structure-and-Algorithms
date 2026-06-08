@@ -1,7 +1,7 @@
 #include<stdio.h>
 
 
-void mergeSort(int*,int*,int,int);
+void merge_sort(int*,int*,int,int);
 void merge(int*,int*,int,int,int);
 
 
@@ -18,7 +18,7 @@ int main(void)
     }
     printf("%d ]", arr[n-1]);
 
-    mergeSort(arr, tempArr, 0, n-1);
+    merge_sort(arr, tempArr, 0, n-1);
 
     printf("\n\nArray after sorting: [ ");
     for(int i=0; i<n-1; i++){
@@ -58,12 +58,12 @@ void merge(int* a, int* b, int low, int mid, int high){
     return;
 }
 
-void mergeSort(int* a, int* b, int low, int high){
+void merge_sort(int* a, int* b, int low, int high){
     int mid;
     if(low < high){
         mid = (low + high)>>1;
-        mergeSort(a,b,low,mid);
-        mergeSort(a,b,mid+1,high);
+        merge_sort(a,b,low,mid);
+        merge_sort(a,b,mid+1,high);
 
         merge(a,b,low,mid,high);
     }

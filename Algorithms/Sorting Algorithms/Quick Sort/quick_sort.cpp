@@ -1,7 +1,7 @@
 #include <iostream>
 
 
-void quickSort(int*,int,int);
+void quick_sort(int*,int,int);
 int partition(int*,int,int);
 
 
@@ -16,7 +16,7 @@ int main(void){
     }
     std::cout << arr[n-1] <<" ]";
 
-    quickSort(arr, 0, n-1);
+    quick_sort(arr, 0, n-1);
 
     std::cout << "\n\nArray after sorting: [ ";
     for(int i=0; i<n-1; i++){
@@ -28,12 +28,12 @@ int main(void){
 }
 
 
-void quickSort(int arr[], int start, int end){
+void quick_sort(int arr[], int start, int end){
     int pivot;
     if(start < end){
         pivot = partition(arr, start, end);
-        quickSort(arr, start, pivot-1);
-        quickSort(arr, pivot+1, end);
+        quick_sort(arr, start, pivot-1);
+        quick_sort(arr, pivot+1, end);
     }
 }
 

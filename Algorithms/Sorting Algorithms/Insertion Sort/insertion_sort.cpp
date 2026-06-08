@@ -1,7 +1,7 @@
 #include <iostream>
 
 
-void insertionSort(int*,int);
+void insertion_sort(int*,int);
 
 
 int main(void){
@@ -15,7 +15,7 @@ int main(void){
     }
     std::cout << arr[n-1] <<" ]";
 
-    insertionSort(arr, n);
+    insertion_sort(arr, n);
 
     std::cout << "\n\nArray after sorting: [ ";
     for(int i=0; i<n-1; i++){
@@ -27,7 +27,7 @@ int main(void){
 }
 
 
-void insertionSort(int arr[], int n){
+void insertion_sort(int arr[], int n){
     int key, j;
     for(int i=1; i<n; i++){
         key = arr[i];
