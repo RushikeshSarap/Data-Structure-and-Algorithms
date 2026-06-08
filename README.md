@@ -8,12 +8,12 @@ This repository contains code in four languages: **C**, **C++**, **Java**, and *
 
 ### Compile
 ```powershell
-gcc -o ZOutputC.exe source.c
+gcc -o ZZOutputC.exe source.c
 ```
 
 ### Run
 ```powershell
-.\ZOutputC.exe
+.\ZZOutputC.exe
 ```
 
 ---
@@ -22,12 +22,12 @@ gcc -o ZOutputC.exe source.c
 
 ### Compile
 ```powershell
-g++ -o ZOutputCPP.exe source.cpp
+g++ -o ZZOutputCPP.exe source.cpp
 ```
 
 ### Run
 ```powershell
-.\ZOutputCPP.exe
+.\ZZOutputCPP.exe
 ```
 
 ---
